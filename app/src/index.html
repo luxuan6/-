@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.css">
 </head>
 
 <body>
@@ -15,21 +16,77 @@
             <span>有书头条</span>
         </div>
         <div class="zhuti">
-            <div class="h2">
-                <span>有书头条</span>
-            </div>
-
-            <div class="h2">
-                <span>有书头条</span>
-            </div>
-            <div class="list">
-                <div class="list-li">
-                    <div class="left"></div>
-                    <div class="right"></div>
+            <div class="tao">
+                <h2>有书头条</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/pin1.png" alt="">
+                                <p>11111111</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/pin2.png" alt="">
+                                <p>222222222</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>
+                                <img src="./img/pin1.png" alt="">
+                                <p>33333333</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="you">
+                <h2>有书头条</h2>
+                <div class="list">
+                    <div class="list-li">
+                        <div class="left">
+                            <h3>你所不知道的“转转有书”</h3>
+                            <p>你真的知道转转有书吗？你真的知道还是假的知道？</p>
+                            <b>2018-05-10</b>
+                        </div>
+                        <div class="right">
+                            <img src="./img/pin3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list-li">
+                        <div class="left">
+                            <h3>你所不知道的“转转有书”</h3>
+                            <p>你真的知道转转有书吗？你真的知道还是假的知道？</p>
+                            <b>2018-05-10</b>
+                        </div>
+                        <div class="right">
+                            <img src="./img/pin4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+    <script src="./js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 2, //'auto'
+            //slidesPerView : 3.7,
+            //如果设置为auto（例如制作全屏展示时的页脚部分），最后一个slide在键盘或鼠标滚动时可能会直接跳到倒数第三个slide，
+            //此时可以手动设置activeIndex解决，如下
+            // onTransitionEnd: function(swiper) {
+            //     if (swiper.progress == 1) {
+            //         swiper.activeIndex = swiper.slides.length - 1
+            //     }
+            // }
+
+        })
+    </script>
 </body>
 
 </html>
